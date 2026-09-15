@@ -75,6 +75,6 @@ let students = [
 
 let scoreStud = students.map((student) => ({
   name: student.name,
-  averageScore: (student.scores.reduce((a, b) => a + b, 0) / student.scores.length).toFixed(1),
+  averageScore: +(student.scores.reduce((a, b) => a + b, 0) / student.scores.length).toFixed(1),
 }));
 console.log(scoreStud);
