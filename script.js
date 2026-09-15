@@ -62,3 +62,19 @@ let sortCloth = clothes.map((item) => ({
 }));
 
 console.log(sortCloth);
+
+//3
+
+let students = [
+  { id: 1, name: "Ali", group: "A", scores: [80, 75, 90], active: true },
+  { id: 2, name: "Vali", group: "B", scores: [60, 65, 70], active: false },
+  { id: 3, name: "Sami", group: "A", scores: [90, 95, 100], active: true },
+  { id: 4, name: "Lola", group: "B", scores: [85, 80, 75], active: true },
+  { id: 5, name: "Nodir", group: "C", scores: [40, 55, 60], active: false },
+];
+
+let scoreStud = students.map((student) => ({
+  name: student.name,
+  averageScore: (student.scores.reduce((a, b) => a + b, 0) / student.scores.length).toFixed(1),
+}));
+console.log(scoreStud);
